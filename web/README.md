@@ -1,65 +1,43 @@
-Color Unblind - Web Version
-Color Unblind is a specialized Flutter-based web application designed to assist individuals with color vision deficiencies. By leveraging computer vision and image processing, the platform provides tools for testing, image correction, and visual simulation.
-
-- Core Features
-Color Blindness Testing: Interactive diagnostic tests (such as Ishihara-style assessments) to help users identify specific types of color vision deficiency.
-
-Image Processing & Correction: Users can upload images to apply real-time color correction filters or simulate how different types of color blindness perceive those images.
-
-Live Video Assistance: Utilizing web camera streams to apply live color correction filters.
-
-Cloud Integration: Secure image handling and storage powered by Supabase.
-
-Multilingual Support: Fully localized interface supporting both English and Arabic.
-
-Responsive Design: Optimized for various screen sizes and browsers using advanced UI scaling.
-
-- Technical Stack
-Frontend: Flutter Web (SDK ^3.9.0).
-
-State Management: BLoC / Cubit for predictable UI state transitions.
-
-Backend Services: Supabase for authentication and storage services.
-
-Networking: Dio for robust API communication.
-
-Dependency Injection: GetIt for modular and testable code architecture.
-
-Internationalization: easy_localization for managing RTL and LTR languages.
-
-- Folder Structure
-lib/core/: Contains shared services like localization, internet state, and image conversion.
-
-lib/module/: Core business logic, data models (e.g., color_blind_type.dart), and repositories.
-
-lib/presentation/: The UI layer, including screens for testing and processing, along with shared widgets and styling.
-
-assets/: Houses translation files, custom fonts (Montserrat, Impact), and graphic assets.
-
-- Getting Started
-Prerequisites
-Flutter SDK (^3.9.0)
-
-A modern web browser (Chrome, Firefox, or Edge recommended)
-
-Installation
-Clone the repository:
+#  Color Unblind - Web Version
 
 
-git clone https://github.com/moaamer2/color_unblind.git
-cd color_unblind
 
-Install dependencies:
+**Color Unblind** is a specialized Flutter-based web application designed to assist individuals with color vision deficiencies. By leveraging computer vision and advanced image processing, the platform provides essential tools for diagnostic testing, real-time image correction, and visual simulation.
 
-flutter pub get
+---
 
+##  Core Features
 
-Run the application:
+* ** Image Processing & Correction**: Upload images to apply real-time correction filters or simulate how different types of color blindness perceive specific visuals.
+* ** Live Video Assistance**: Real-time camera stream processing using web camera feeds to apply corrective filters on the fly.
+* ** Cloud Integration**: Robust and secure image handling and data storage powered by the **Supabase** ecosystem.
+* ** Multilingual Support**: A fully localized interface offering seamless support for both **English** and **Arabic**.
+* ** Responsive Design**: A UI optimized for a wide variety of screen sizes and browsers using advanced scaling techniques.
 
-flutter run -d chrome
+---
 
-Building for Production
+##  Technical Stack
 
-To generate a highly optimized web build:
+The application is built with a modern, modular architecture to ensure scalability and performance:
 
-flutter build web --release --web-renderer canvaskit
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | **Flutter Web** (SDK ^3.9.0) | Multi-platform UI framework. |
+| **State Management** | **BLoC / Cubit** | Predictable state transitions and logic separation. |
+| **Backend** | **Supabase** | Authentication and cloud storage. |
+| **Networking** | **Dio** | Powerful HTTP client for API communication. |
+| **DI** | **GetIt** | Service locator for dependency injection. |
+| **Localization** | **Easy Localization** | Managing RTL/LTR support and translations. |
+
+---
+
+## 📂 Folder Structure
+
+The project follows a clean architecture pattern to separate concerns:
+
+```text
+lib/
+├── core/         # Shared services (Localization, Internet state, Image conversion)
+├── module/       # Business logic, Repositories, and Data models
+├── presentation/ # UI Layer (Screens, Widgets, and Styling)
+└── assets/       # Translation files, Custom fonts, and Images
